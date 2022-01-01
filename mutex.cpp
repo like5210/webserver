@@ -20,10 +20,6 @@ void Mutex::Unlock()
 	pthread_mutex_unlock(&m_mutex);
 }
 	
-bool Mutex::Trylock()
-{
-	return EBUSY != pthread_mutex_trylock(&m_mutex);
-}
 	
 pthread_mutex_t * Mutex::GetMutex()
 {
